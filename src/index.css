@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Rubik:wght@700&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-clr);
+    color: var(--font-f);
+}
+
+:root{
+    --bg-clr:#344056;
+    --clr-primary:#FFC107;
+    --clr-secondary:#8307ff;
+    --text-clr:#E1E8EB;
+    --font-heading:'Rubik', sans-serif;
+    --font-semi:'Lora', serif;
+    --font-regular:'Ubuntu', sans-serif;
+
+}
+

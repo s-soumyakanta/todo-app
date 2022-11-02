@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 30rem; 
+    color: black;
+    margin: auto;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+
+}
+.heading{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-heading);
+    color: var(--clr-primary);
+}
+
+.enter-task{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 4rem;
+    border: 2px solid var(--clr-secondary);
+    border-radius: .8rem;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    
+}
+
+
+input{
+    max-height: 2rem;
+     border-radius: .1rem;
+     border: none;
+     font-size: 1.5rem;
+     cursor: pointer;
+     box-sizing: border-box;  
+     max-width: 135%;
+     outline: none;
+     font-family: var(--font-semi);
+     color:var(--text-clr);
+}
+
+.todo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    height: 3.5rem;
+    border: 2px solid var(--clr-secondary);
+    border-radius: .8rem;
+    padding: 1rem;
+    width: 100% ; 
+   
+
+}
+.todo-action{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    min-width: 4rem;
+    justify-content: space-between;
+    
+}
+
+
+.todo-name{
+    max-width: 20rem;
+    /* max-height: 2rem; */
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    font-size: 1.5rem;
+    color: var(--text-clr);
+    font-family: var(--font-regular);
+ 
+}
+.btn{
+    
+    min-width: 1.3rem;
+    min-height: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-primary);
+    
+}
+.plus{
+    min-width: 2rem;
+    min-height: 2rem;
+    color: var(--clr-secondary);
+}
+.btn:hover{
+    cursor: pointer;
+    color: var(--clr-primary);
+}
+.delete:hover{
+    color: #FF1E1E;
+
+}
+.done{
+    color:#38E54D;
+}
+.done:hover{
+    color:#38E54D;
+}
+.compleated{
+    text-decoration: line-through;
+}
+.taskDone{
+   text-decoration: line-through;
+}
