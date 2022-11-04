@@ -88,6 +88,7 @@ return(
       )}
 
    )}
+   <div className="dev">Developed By <a href="https://github.com/s-soumyakanta" target="_blank">S Soumyakanta</a></div>
       
 </div>
 

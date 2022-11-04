@@ -36,6 +36,20 @@
     margin-bottom: 2rem;
     
 }
+.dev{
+    font-family: var(--font-semi);
+    color: var(--text-clr);
+    position: fixed;
+    bottom: 0;
+    font-size: x-small;
+    
+    
+
+}
+.dev a{
+    color: var(--clr-primary);
+    text-decoration: none;
+}
 
 
 input{
