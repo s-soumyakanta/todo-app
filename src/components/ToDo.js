@@ -1,4 +1,4 @@
-import {React,useState} from "react";
+import {React,useState,useEffect} from "react";
 import "./fontawsm"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../App.css"
@@ -7,18 +7,24 @@ import "../App.css"
 export default function ToDo(){
 
 const [inputData,setInputData] = useState("")
-const [todoList,setTodoList] = useState([])
-const [isDone, setIsDone] = useState("false")
+const [todoList,setTodoList] = useState(JSON.parse(localStorage.getItem("todo")) || [])
 
+
+useEffect(()=>{
+   localStorage.setItem("todo",JSON.stringify(todoList))
+},[todoList])
 
 const  addItem = () =>{
    if(!inputData){
       
    }else{
-   setTodoList([...todoList,inputData])
+   setTodoList([...todoList,{data:inputData,isDone:false}])
+   
    setInputData("")
    }
 }
+
+
 const deleteTodo = (id)=>{
    
      const deleteOneToDo = todoList.filter((elem,ind) =>{
@@ -28,9 +34,29 @@ const deleteTodo = (id)=>{
      })
      setTodoList(deleteOneToDo)
 }
-const handleDone = ()=>{
-   setIsDone(!isDone)
+
+
+const handelDone = (id)=>{ 
+   const newTodo = []
+   const doneTodo = todoList.map((currentTodo,ind)=>{
+      const doneStatus = currentTodo.isDone
+      if(ind === id){
+         const updatedTodo = {
+            ...currentTodo,isDone:!doneStatus
+            
+         }
+         newTodo.push(updatedTodo)
+      }else{
+         newTodo.push(currentTodo)
+      }
+      return newTodo
+   })
+   setTodoList(newTodo)
+   console.log(doneTodo)
+   console.clear()
 }
+
+
 
 
 return(
@@ -49,12 +75,11 @@ return(
    {todoList.map( (elem,ind)=>{
     return(
       <div className="todo"key={ind}>
-    <div className={isDone?"todo-name ":"todo-name taskDone"}>{elem}</div>
-
+    <div className={elem.isDone?"todo-name taskDone": "todo-name "}>{elem.data}</div>
     <div className="todo-action">
     <div className="delete"><FontAwesomeIcon icon="fa-solid fa-trash-can" className="btn delete" onClick={()=>deleteTodo(ind)} />
     </div>
-    <div className="checkbox"><FontAwesomeIcon icon={isDone ? "fa-solid fa-check":"fa-solid fa-check-double"} className={isDone  ?"btn":"btn done"} onClick={handleDone}/></div>
+    <div className="checkbox"><FontAwesomeIcon icon={elem.isDone ? "fa-solid fa-check-double":"fa-solid fa-check"} className={elem.isDone  ?"btn done":"btn"} onClick={()=>handelDone(ind)}/></div>
 
      </div>
     
