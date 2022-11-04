@@ -37,11 +37,11 @@
     
 }
 .dev{
-    font-family: var(--font-semi);
+    font-family: var(--font-regular);
     color: var(--text-clr);
     position: fixed;
     bottom: 0;
-    font-size: x-small;
+    font-size: 1rem;
     
     
 
