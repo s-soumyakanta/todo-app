@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/s-soumyakanta/todo-app/static/css/main.55b22ad1.css",
+    "main.js": "/s-soumyakanta/todo-app/static/js/main.b49a8c39.js",
+    "static/js/787.5e141d9e.chunk.js": "/s-soumyakanta/todo-app/static/js/787.5e141d9e.chunk.js",
+    "index.html": "/s-soumyakanta/todo-app/index.html",
+    "main.55b22ad1.css.map": "/s-soumyakanta/todo-app/static/css/main.55b22ad1.css.map",
+    "main.b49a8c39.js.map": "/s-soumyakanta/todo-app/static/js/main.b49a8c39.js.map",
+    "787.5e141d9e.chunk.js.map": "/s-soumyakanta/todo-app/static/js/787.5e141d9e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55b22ad1.css",
+    "static/js/main.b49a8c39.js"
+  ]
+}
