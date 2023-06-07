@@ -1,4 +1,8 @@
+
 # React Simple Todo App
+#### <a href="s-soumyakanta.github.io/todo-app/">Live Link</a>
+![todo](https://github.com/s-soumyakanta/todo-app/assets/92138792/38368670-4c0c-4070-a754-caf35c226117)
+
 
 Welcome to the React Simple Todo App! This is a basic todo list application built using React. It allows you to create, mark as done, and delete todos. The app utilizes local storage to save the todo items, ensuring that your todos persist even if you refresh the page or close the browser.
 
